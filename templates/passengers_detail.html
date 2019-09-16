@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Passengers
+{% endblock %}
+
+{% block body %}
+
+<h1>Passenegrs</h1>
+<h4>Name  flights_id</h4>
+ <input name="passenger" list="passenger" placeholder="Passenger Or Flight_id">
+            <datalist id="passenger">
+
+        {% for passenger in passanger %}
+        <option>{{ passenger.name }},{{ passenger.flight_id }}</option>
+        {% endfor %}
+            </datalist>
+{% endblock %}
